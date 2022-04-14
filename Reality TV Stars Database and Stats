@@ -1,0 +1,36 @@
+CREATE TABLE queens (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    state TEXT);
+    
+INSERT INTO queens (fullname, age, state) VALUES ("Bianca Del Rio", 46, "LA");
+INSERT INTO queens (fullname, age, state) VALUES ("Jinkx Monsoon", 34, "OR");
+INSERT INTO queens (fullname, age, state) VALUES ("Katya Zamolodchikova", 39, "MA");
+INSERT INTO queens (fullname, age, state) VALUES ("Trixie Mattel", 32, "WI");
+INSERT INTO queens (fullname, age, state) VALUES ("Symone", 27, "AR");
+INSERT INTO queens (fullname, age, state) VALUES ("Nina Bo'nina Brown", 39, "SC");
+INSERT INTO queens (fullname, age, state) VALUES ("Shea Coulee", 33, "IN");
+INSERT INTO queens (fullname, age, state) VALUES ("Tatiana", 34, "VA");
+
+CREATE TABLE show_run (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    queen_id INTEGER,
+    season INTEGER,
+    winner TEXT);
+
+INSERT INTO show_run (queen_id, season, winner) VALUES (1, 6, "YES");
+INSERT INTO show_run (queen_id, season, winner) VALUES (2, 5, "YES");
+INSERT INTO show_run (queen_id, season, winner) VALUES (3, 7, "NO");
+INSERT INTO show_run (queen_id, season, winner) VALUES (4, 7, "NO");
+INSERT INTO show_run (queen_id, season, winner) VALUES (5, 13, "YES"); 
+INSERT INTO show_run (queen_id, season, winner) VALUES (6, 9, "NO");
+INSERT INTO show_run (queen_id, season, winner) VALUES (7, 9, "NO");
+INSERT INTO show_run (queen_id, season, winner) VALUES (8, 2, "NO");
+
+/*Return queens, their season and whether they were the winner*/
+SELECT queens.fullname, show_run.season, show_run.winner 
+    FROM queens
+    JOIN show_run
+    ON queens.id = show_run.queen_id
+    ORDER BY season 
