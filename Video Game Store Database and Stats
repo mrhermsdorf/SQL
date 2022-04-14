@@ -1,0 +1,18 @@
+CREATE TABLE videogame_store (id INTEGER PRIMARY KEY, title TEXT, genre TEXT, price INTEGER);
+INSERT INTO videogame_store VALUES (1, "Fortnite", "Battle Royale", 0);
+INSERT INTO videogame_store VALUES (2, "Tomb Raider", "RPG", 60);
+INSERT INTO videogame_store VALUES (3, "Star Wars Battlefron 2","FPS", 50);
+INSERT INTO videogame_store VALUES (4, "Life is Strange", "Adventure", 40);
+INSERT INTO videogame_store VALUES (5, "The Witcher", "RPG", 45);
+INSERT INTO videogame_store VALUES (6, "Injustice", "Fighter", 13);
+INSERT INTO videogame_store VALUES (7, "Star Wars Galaxy of Heroes", "RPG", 0);
+INSERT INTO videogame_store VALUES (8, "Dead by Daylight", "Horror", 30);
+INSERT INTO videogame_store VALUES (9, "Mario Kart", "Racing", 49);
+INSERT INTO videogame_store VALUES (10, "Super Mario Brothers", "Platform", 15);
+INSERT INTO videogame_store VALUES (11, "Kingdom Hearts", "RPG", 59);
+INSERT INTO videogame_store VALUES (12, "APEX Legends", "Battle Royale", 0);
+INSERT INTO videogame_store VALUES (13, "Call of Duty", "FPS", 44);
+INSERT INTO videogame_store VALUES (14, "Top Spin 2", "Sports", 5);
+INSERT INTO videogame_store VALUES (15, "Madden", "Sports", 55);
+SELECT * FROM videogame_store ORDER BY price;
+SELECT * FROM videogame_store WHERE price < 40 ORDER BY price;
