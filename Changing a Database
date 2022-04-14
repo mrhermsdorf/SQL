@@ -1,0 +1,17 @@
+CREATE TABLE ao3 (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    story_type TEXT,
+    published_works INTEGER);
+
+INSERT INTO ao3 (name, story_type, published_works) VALUES ("Paulie", "suspense", 5);
+INSERT INTO ao3 (name, story_type, published_works) VALUES ("Gianni", "fluff", 15);
+INSERT INTO ao3 (name, story_type, published_works) VALUES ("Stan", "AU", 7);
+INSERT INTO ao3 (name, story_type, published_works) VALUES ("KiKi", "angst", 22);
+SELECT * FROM ao3;
+UPDATE ao3 set name = "Stanislas"
+WHERE id = 3;
+SELECT * FROM ao3;
+DELETE FROM ao3 
+WHERE id = 1;
+SELECT * FROM ao3;
